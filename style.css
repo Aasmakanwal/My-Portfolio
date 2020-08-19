@@ -10,6 +10,7 @@ html {
 
 body {
     width: 100vm;
+    /* overflow: hidden; */
 }
 
 #Sidebar {
@@ -115,7 +116,6 @@ label #cancel {
 .copy-icon {
     font-size: 22px;
     padding: 5px 10px 5px 20px;
-    /* display: inline-block; */
 }
 
 .copy p {
@@ -133,7 +133,6 @@ label #cancel {
     text-decoration: none;
     color: pink;
 }
-
 /* Home */
 
 #home {
@@ -143,13 +142,13 @@ label #cancel {
     flex-wrap: wrap;
     align-items: center;
     background-color: #063146;
+    transition: 0.5s ;
 }
 
 .home-1, .home-2 {
     width: 400px;
     flex: 1;
     margin: 10px auto 20px auto;
-    /* margin-bottom: 20px; */
 }
 
 .home-2 h1 {
@@ -165,6 +164,7 @@ label #cancel {
     width: 100%;
     text-align: center;
     padding: 20px 20px;
+    transition: 0.5s ;
 }
 
 #about h1 {
@@ -185,11 +185,6 @@ label #cancel {
     }
 }
 
-@media (max-width: 500px) {
-    #skills {
-        width: 400px;
-    }
-}
 @media (max-width: 300px) {
     #home img {
         width: 250px;
@@ -198,7 +193,10 @@ label #cancel {
 }
 
 /* NY WORK */
-
+#work ,#conyact{
+    
+    transition: 0.5s all;
+}
 #work h1 {
     padding-bottom: 5px;
     text-align: center;
@@ -243,16 +241,17 @@ label #cancel {
 /* MY SKILLS */
 
 #skills {
-    /* text-align: center; */
     width: 100%;
     margin: 60px auto;
     list-style: none;
+    transition: 0.5s all;
 }
 
 #skills li {
     margin: 30px auto;
-    width: 80%;
+    width: 60%;
 }
+
 #skills h3 {
     margin-bottom: 5px;
 }
@@ -260,8 +259,7 @@ label #cancel {
 .bar {
     background-color: #063146;
     display: block;
-    height: 20px;
-    /* line-height: 35px; */
+    height: 15px;
     border: 1px solid rgba(0, 0, 0, 0.349);
     border-radius: 3px;
     overflow: hidden;
@@ -269,7 +267,8 @@ label #cancel {
 }
 
 .bar span {
-    height: 20px;
+    font-size: 12px;
+    height: 15px;
     float: left;
     background-color: #0076b1;
 }
@@ -322,7 +321,7 @@ label #cancel {
         width: 0%;
     }
     100% {
-        width:60%;
+        width: 60%;
     }
 }
 
@@ -342,4 +341,86 @@ label #cancel {
     100% {
         width: 20%;
     }
+}
+
+/* CONTACT */
+
+.contact-detail {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-detail .fa {
+    font-size: 25px;
+    background-color: #042331;
+    color: white;
+    width: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.icons li {
+    margin: 20px 0 20px 0;
+}
+
+.icons, .mail {
+    width: 400px;
+    flex: 1;
+    list-style: none;
+    margin: 10px auto 20px auto;
+    text-align: center
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0px 0px 10px #042331;
+}
+
+textarea {
+    font-size: 20px;
+    margin: 20px 0 20px 0;
+}
+
+.mail button {
+    cursor: pointer;
+    width: 300px;
+    border: none;
+    outline: none;
+    background-color: #063146;
+    color: white;
+    height: 30px;
+    font-size: 18px;
+}
+
+.mail input {
+    margin: 20px 0 20px 0;
+    height: 25px;
+    width: 300px;
+    font-size: 20px;
+}
+.links {
+    text-align: center;
+}
+.links .fa {
+    font-size: 20px;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #063146;
+    line-height: 40px;
+    margin: 10px auto;
+}
+.links li {
+    display: inline-block;
+
+}
+.line2 {
+    margin: 30px auto;
+    width: 300px;
+    height: 2px;
+    background-color: #006394;
 }
